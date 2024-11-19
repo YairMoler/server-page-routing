@@ -12,6 +12,15 @@ http.createServer((req, res) => {
         case "/pages/sports":
             getFile(res, "./html/sport.html");
             break;
+        case "/files/people":
+            getFile(res, "./data/people.txt");
+            break;
+        case "/files/shops":
+            getFile(res, "./data/shops.txt");
+            break;
+        case "/contacts":
+            getFile(res, "./data/contacts.json");
+            break;
     }
 }).listen(8080);
 
