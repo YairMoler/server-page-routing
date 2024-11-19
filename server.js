@@ -21,14 +21,14 @@ http.createServer((req, res) => {
         case "/files/shops":
             getFile(res, "./data/shops.txt");
             break;
-        case "/contact/1":
-            getFile(res, "./data/contacts.json");
+        case "/contacts/1":
+            getContact(res, 1);
             break;
-        case "/contact/2":
-            getFile(res, "./data/contacts.json");
+        case "/contacts/2":
+            getContact(res, 2);
             break;
-        case "/contact/3":
-            getFile(res, "./data/contacts.json");
+        case "/contacts/3":
+            getContact(res, 3);
             break;
         case "/contacts":
             getFile(res, "./data/contacts.json");
@@ -54,7 +54,7 @@ const getContact = (res, num) => {
             return;
         }
         const parsedData = JSON.parse(data);
-        const contact = parsedData[num - 1];
+        const contact = parsedData.contacts[num - 1];
         res.write(JSON.stringify(contact));
         res.end();
     });
