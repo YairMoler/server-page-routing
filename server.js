@@ -3,40 +3,37 @@ const http = require("node:http");
 const { json } = require("stream/consumers");
 
 http.createServer((req, res) => {
+    console.log("Running...");
+    console.log("req.url:", req.url);
     const splittedURL = req.url.split("/");
-    switch (req.url) {
-        case "/pages":
-            getFile(res, "./html/pages.html");
-            break;
-        case "/pages/about":
-            getFile(res, "./html/about.html");
-            break;
-        case "/pages/sports":
-            getFile(res, "./html/sport.html");
-            break;
-        case "/files":
-            getFile(res, "./html/files.html");
-        case "/files/people":
-            getFile(res, "./data/people.txt");
-            break;
-        case "/files/shops":
-            getFile(res, "./data/shops.txt");
-            break;
-        case "/contacts/1":
-            getContact(res, 1);
-            break;
-        case "/contacts/2":
-            getContact(res, 2);
-            break;
-        case "/contacts/3":
-            getContact(res, 3);
-            break;
-        case "/contacts":
-            getFile(res, "./data/contacts.json");
-            break;
-        case "/comps/prime/100":
-            prime(req, res);
-            break;
+    if (req.rul === "/pages") {
+        console.log("i am at pages");
+        getFile(res, "./html/pages.html");
+    } else if (req.rul === "/pages/about") {
+        getFile(res, "./html/about.html");
+    } else if (req.rul === "/pages/sports") {
+        getFile(res, "./html/sport.html");
+    } else if (req.rul === "/files") {
+        getFile(res, "./html/files.html");
+    } else if (req.rul === "/files/people") {
+        getFile(res, "./data/people.txt");
+    } else if (req.rul === "/files/shops") {
+        getFile(res, "./data/shops.txt");
+    } else if (req.rul === "/contacts/1") {
+        getFile(res, "./data/contacts.json");
+    } else if (req.rul === "/contacts/2") {
+        getFile(res, "./data/contacts.json");
+    } else if (req.rul === "/contacts/3") {
+        getFile(res, "./data/contacts.json");
+    } else if (req.rul === "/contacts") {
+        getFile(res, "./data/contacts.json");
+    } else if (req.url.match(/\/comps\/factorial\/[0-9]+/)) {
+        console.log("hi");
+        getFile(res, "./html/pages.html");
+    } else {
+        console.log(typeof req.url);
+        console.log("default");
+        getFile(res, "./data/shops.txt");
     }
 }).listen(8080);
 
