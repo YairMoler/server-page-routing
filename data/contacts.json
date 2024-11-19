@@ -1,0 +1,44 @@
+{
+    "contacts": [
+      {
+        "id": 1,
+        "first_name": "Alice",
+        "last_name": "Johnson",
+        "phone": "+1-555-1010",
+        "email": "alice.johnson@example.com",
+        "address": {
+          "street": "123 Elm St.",
+          "city": "Seattle",
+          "state": "WA",
+          "zipcode": "98101"
+        }
+      },
+      {
+        "id": 2,
+        "first_name": "Bob",
+        "last_name": "Miller",
+        "phone": "+1-555-2020",
+        "email": "bob.miller@example.com",
+        "address": {
+          "street": "456 Pine Ave.",
+          "city": "Portland",
+          "state": "OR",
+          "zipcode": "97205"
+        }
+      },
+      {
+        "id": 3,
+        "first_name": "Charlie",
+        "last_name": "Davis",
+        "phone": "+1-555-3030",
+        "email": "charlie.davis@example.com",
+        "address": {
+          "street": "789 Oak Dr.",
+          "city": "San Francisco",
+          "state": "CA",
+          "zipcode": "94107"
+        }
+      }
+    ]
+  }
+  
