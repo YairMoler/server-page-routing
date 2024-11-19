@@ -13,6 +13,8 @@ http.createServer((req, res) => {
         case "/pages/sports":
             getFile(res, "./html/sport.html");
             break;
+        case "/files":
+            getFile(res, "./html/files.html");
         case "/files/people":
             getFile(res, "./data/people.txt");
             break;
