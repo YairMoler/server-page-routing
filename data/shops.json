@@ -1,0 +1,53 @@
+{
+    "shops": [
+      {
+        "id": 101,
+        "name": "Tech World",
+        "type": "Electronics",
+        "location": {
+          "street": "789 Electronics Blvd.",
+          "city": "San Francisco",
+          "state": "CA",
+          "zipcode": "94103"
+        },
+        "contact": {
+          "phone": "+1-415-555-1234",
+          "email": "contact@techworld.com"
+        },
+        "hours": {
+          "monday": "9:00 AM - 8:00 PM",
+          "tuesday": "9:00 AM - 8:00 PM",
+          "wednesday": "9:00 AM - 8:00 PM",
+          "thursday": "9:00 AM - 8:00 PM",
+          "friday": "9:00 AM - 8:00 PM",
+          "saturday": "10:00 AM - 6:00 PM",
+          "sunday": "Closed"
+        }
+      },
+      {
+        "id": 102,
+        "name": "Green Grove Market",
+        "type": "Grocery",
+        "location": {
+          "street": "101 Green Rd.",
+          "city": "Berkeley",
+          "state": "CA",
+          "zipcode": "94710"
+        },
+        "contact": {
+          "phone": "+1-510-555-6789",
+          "email": "info@greengrove.com"
+        },
+        "hours": {
+          "monday": "8:00 AM - 9:00 PM",
+          "tuesday": "8:00 AM - 9:00 PM",
+          "wednesday": "8:00 AM - 9:00 PM",
+          "thursday": "8:00 AM - 9:00 PM",
+          "friday": "8:00 AM - 9:00 PM",
+          "saturday": "8:00 AM - 9:00 PM",
+          "sunday": "9:00 AM - 6:00 PM"
+        }
+      }
+    ]
+  }
+  
