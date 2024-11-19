@@ -2,6 +2,7 @@ const fs = require("fs");
 const http = require("node:http");
 
 http.createServer((req, res) => {
+    const splittedURL = req.url.split("/");
     switch (req.url) {
         case "/pages":
             getFile(res, "./html/pages.html");
@@ -19,6 +20,15 @@ http.createServer((req, res) => {
             break;
         case "/files/shops":
             getFile(res, "./data/shops.txt");
+            break;
+        case "/contact/1":
+            getFile(res, "./data/contacts.json");
+            break;
+        case "/contact/2":
+            getFile(res, "./data/contacts.json");
+            break;
+        case "/contact/3":
+            getFile(res, "./data/contacts.json");
             break;
         case "/contacts":
             getFile(res, "./data/contacts.json");
