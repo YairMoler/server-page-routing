@@ -36,3 +36,16 @@ const getFile = (res, file) => {
         res.end();
     });
 };
+
+const getContact = (res, num) => {
+    fs.readFile("./data/contacts.json", (err, data) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        const parsedData = JSON.parse(data);
+        const contact = parsedData[num - 1];
+        res.write(JSON.stringify(contact));
+        res.end();
+    });
+};
